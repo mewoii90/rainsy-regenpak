@@ -57,7 +57,7 @@
     }
 
     .page-content {
-      max-width: 1300px;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 60px 24px;
       width: 100%;
@@ -78,11 +78,20 @@
       margin-bottom: 48px;
     }
 
-    /* Rooster met 4 vakken */
+    /* Sectie titels */
+    .section-heading {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 48px 0 24px 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Rooster met 4 vakken naast elkaar op grote schermen */
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
     }
 
     .product-card {
@@ -93,11 +102,16 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
     }
 
     .product-image-container {
       width: 100%;
-      height: 420px;
+      height: 380px;
       background-color: #1e3a8a;
       overflow: hidden;
     }
@@ -109,22 +123,31 @@
     }
 
     .product-info {
-      padding: 24px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
       text-align: center;
+      flex: 1;
     }
 
     .product-title {
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       font-weight: 600;
     }
 
     .product-desc {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #cbd5e1;
       line-height: 1.4;
+      flex: 1;
+    }
+
+    .product-price {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 8px;
     }
 
     footer {
@@ -133,7 +156,7 @@
       text-align: center;
       padding: 20px;
       font-size: 0.85rem;
-      margin-top: auto;
+      margin-top: 60px;
     }
 
     @media (max-width: 768px) {
@@ -164,63 +187,115 @@
     <nav>
       <a href="index.html">hoofdpagina</a>
       <a href="collectie.html">collectie</a>
-      <a href="#technologie">technologie</a>
-      <a href="#over-ons">over ons</a>
-      <a href="#winkelwagen">winkelwagen (0)</a>
+      <a href="over-ons.html">over ons</a>
+      <a href="winkelwagen.html">winkelwagen (0)</a>
     </nav>
   </header>
 
   <div class="page-content">
     <h1>Onze Collectie</h1>
-    <p class="page-subtitle"> Rainsy ontdek alle kleuren voor jongeren</p>
+    <p class="page-subtitle">RAINSY Always ready. Ontdek alle kleuren en edities voor meisjes en jongens met veel diversiteit, en opties.</p>
 
+    <!-- JONGENS SECTIE (4 VAKKEN) -->
+    <h2 class="section-heading">Jongens editie</h2>
     <div class="products-grid">
       
-      <!-- Vak 1 -->
       <div class="product-card">
         <div class="product-image-container">
-          <img src="foto1.png" alt="Rain2Go Editie 1">
+          <img src="jongens1.png" alt="Boys">
         </div>
         <div class="product-info">
-          <h2 class="product-title">Rain2Go Edition 1</h2>
-          
+          <h3 class="product-title">Zwart / Rood</h3>
+          <p class="product-desc">Wind- en waterdicht tweedelig regenpak met verstelbare capuchon en opbergtas.</p>
+          <div class="product-price">€ 29,99</div>
         </div>
       </div>
 
-      <!-- Vak 2 -->
       <div class="product-card">
         <div class="product-image-container">
-          <img src="foto2.png" alt="Rain2Go Editie 2">
+          <img src="jongens2.png" alt="Boys">
         </div>
         <div class="product-info">
-          <h2 class="product-title">Rain2Go Edition 2</h2>
-          
+          <h3 class="product-title">Bruin / Grijs / Zwart</h3>
+          <p class="product-desc">Lichtgewicht bescherming met elastische mouwen en compact opbergzakje.</p>
+          <div class="product-price">€ 29,99</div>
         </div>
       </div>
 
-      <!-- Vak 3 -->
       <div class="product-card">
         <div class="product-image-container">
-          <img src="foto3.png" alt="Rain2Go Editie 3">
+          <img src="jongens3.png" alt="Boys">
         </div>
         <div class="product-info">
-          <h2 class="product-title">Rain2Go Edition 3</h2>
-          
+          <h3 class="product-title">Beige / Blauw / Grijs</h3>
+          <p class="product-desc">Lichte tinten gecombineerd met ultieme waterdichte technologie.</p>
+          <div class="product-price">€ 29,99</div>
         </div>
       </div>
 
-      <!-- Vak 4 -->
       <div class="product-card">
         <div class="product-image-container">
-          <img src="foto4.png" alt="Rain2Go Editie 4">
+          <img src="jongens4.png" alt="Boys">
         </div>
         <div class="product-info">
-          <h2 class="product-title">Rain2Go Edition 4</h2>
-         
+          <h3 class="product-title">Donker blauw / Grijs / Zwart</h3>
+          <p class="product-desc">Opvallend sportief design, duurzaam en makkelijk mee te nemen.</p>
+          <div class="product-price">€ 29,99</div>
         </div>
       </div>
 
     </div>
+
+    <!-- MEISJES SECTIE (4 VAKKEN) -->
+    <h2 class="section-heading">Meisjes editie</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="meisjes1.png" alt="Girls">
+        </div>
+        <div class="product-info">
+          <h3 class="product-title">Cherry / Blush / Wit</h3>
+          <p class="product-desc">Stijlvolle pasvorm met opbergtasje voor jas en broek in één.</p>
+          <div class="product-price">€ 29,99</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="meisjes2.png" alt="Girls">
+        </div>
+        <div class="product-info">
+          <h3 class="product-title">Bruin / Zwart/ Beige</h3>
+          <p class="product-desc">Modieuze bescherming met elastische mouwen en waterafstotende laag.</p>
+          <div class="product-price">€ 29,99</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="meisjes3.png" alt="Girls">
+        </div>
+        <div class="product-info">
+          <h3 class="product-title">Roze / Blush /</h3>
+          <p class="product-desc">Frisse Roze tinten met een comfortabele en stijlvolle capuchon.</p>
+          <div class="product-price">€ 29,99</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="meisjes4.png" alt="Girls">
+        </div>
+        <div class="product-info">
+          <h3 class="product-title">Licht blauw / Donker blauw / Grijs</h3>
+          <p class="product-desc">Tijdloze kleurcombinatie, lichtgewicht en altijd ready voor elke bui.</p>
+          <div class="product-price">€ 29,99</div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
   <footer>
@@ -229,3 +304,4 @@
 
 </body>
 </html>
+
